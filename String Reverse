@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+   char s[100],u[100];
+   int begin=0,end=0,n;
+   scanf("%s",s);
+   n=strlen(s);
+   end=n-1;
+   for(begin=0;begin<n;begin++)
+   {
+       u[begin]=s[end];
+       end--;
+   }
+   u[begin]='\0';
+   printf("%s\n",u);
+    return 0;
+}
