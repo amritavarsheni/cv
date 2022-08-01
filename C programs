@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int n,flag=0;
+    scanf("%s",str);
+    n=strlen(str);
+    for(int i=0;i<n;i++)
+    {
+            if(str[i]!=str[n-i-1])
+            {
+                flag=1;
+                break;
+            }
+    }
+    if(flag)
+    {
+        printf("\n Not a Palindrome");
+    }
+    else
+    {
+        printf("\n Palindrome");
+    }
+    return 0;
+}
