@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,s,rem=0,temp;
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+    s=n%10;
+    rem=rem+(s*s*s);
+    n=n/10;
+    }
+    if(temp==rem)
+    {
+        printf("Armstrong Number");
+    }
+    else
+    {
+        printf("Not an Armstrong Number");
+    }
+
+    return 0;
+}
