@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+    char s[10];
+    scanf("%s",s);
+    int a=atoi(s);
+    int rem,decimal_num=0,base=1,count=1;
+    while ( a > 0)  
+    {  
+        rem = a % 10; 
+        decimal_num = decimal_num + rem * base;  
+        a = a / 10;   
+        base = base * 2;  
+    } 
+    while(decimal_num>1)
+    {
+       if(decimal_num % 2==0)
+        {
+        decimal_num=decimal_num/2;
+        }
+      else
+        {
+        decimal_num=decimal_num-1;
+        }
+        count++;
+    }
+    printf("%d",count);
+
+    return 0;
+}
